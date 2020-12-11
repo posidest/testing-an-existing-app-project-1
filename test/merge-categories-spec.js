@@ -28,11 +28,23 @@ describe("mergeCategories()", () => {
     });
 
     it("should return a single <li> for one category", () => {
-      expect.fail('please write this test');
+      //arrange
+      const cats = ['boring'];
+
+      // act
+      const test = mergeCategories(template, cats, 'li');
+
+      // assert
+
+      expect(test).to.contain('<div>');
+      expect(test).to.contain('</div>');
+      expect(test).to.contain('<ul>');
+      expect(test).to.contain("</ul>");
+      expect(test).to.contain("<li>boring</li>");
     });
 
     it("should return an <li> for each category", () => {
-      expect.fail('please write this test');
+
     });
   });
 
