@@ -12,6 +12,19 @@ describe("mergeCategories()", () => {
     `;
 
     it("should return no <li>s for no categories", () => {
+      //arrange
+      let categories = [];
+
+      //act
+      const test = mergeCategories(template, categories, "li")
+      expect(test).to.contain("<div>");
+      expect(test).to.contain("</div>");
+      expect(test).to.contain("<ul>");
+      expect(test).to.contain("</ul>");
+      expect(test).to.not.contain("<li>");
+      expect(test).to.not.contain("</li>");
+      //assert
+      //expect().to.include()
     });
 
     it("should return a single <li> for one category", () => {
