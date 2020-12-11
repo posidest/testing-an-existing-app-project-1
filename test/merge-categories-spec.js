@@ -44,7 +44,21 @@ describe("mergeCategories()", () => {
     });
 
     it("should return an <li> for each category", () => {
+      //arrrange
+      const arr = "abc".split("")
 
+      //act
+      const test = mergeCategories(template, arr, "li");
+      
+      //assert
+      expect(test).to.contain("<div>")
+      expect(test).to.contain("</div>")
+      expect(test).to.contain("<ul>")
+      expect(test).to.contain("</ul>")
+      expect(test).to.contain("<li>a</li>");
+      expect(test).to.contain("<li>b</li>");
+      expect(test).to.contain("<li>c</li>");
+      expect(test).to.not.contain("<!-- Content here -->")
     });
   });
 
