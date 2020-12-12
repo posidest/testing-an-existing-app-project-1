@@ -42,7 +42,7 @@ describe("The getValueFromBody function", () => {
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
-const test = getValueFromBody(body, key);
+  const test = getValueFromBody(body, key);
 
     // Assert
     // Replace the fail line with an assertion for the
@@ -73,12 +73,13 @@ const test = getValueFromBody(body, key);
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
+    const test = getValueFromBody(body, key);
 
 
     // Assert
     // Replace the fail line with an assertion for the
     // expected value for the key that you selected that
     // has the encoded value in it
-    expect.fail('please write this test');
+    expect(test).to.equal("Level Thirty-One");
   });
 });

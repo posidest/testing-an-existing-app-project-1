@@ -49,7 +49,7 @@ describe("mergeCategories()", () => {
 
       //act
       const test = mergeCategories(template, arr, "li");
-      
+
       //assert
       expect(test).to.contain("<div>")
       expect(test).to.contain("</div>")
@@ -72,7 +72,19 @@ describe("mergeCategories()", () => {
     `;
 
     it("should return no <option>s for no categories", () => {
-      expect.fail('please write this test');
+      const categories = [];
+
+      const test = mergeCategories(template, categories, "option");
+
+      expect(test).to.contain("<div>")
+      expect(test).to.contain("</div>")
+      expect(test).to.contain("<select>")
+      expect(test).to.contain("</select>")
+
+      expect(test).to.not.contain("<option>")
+      expect(test).to.not.contain("</option>")
+
+      expect(test).to.not.contain("<!-- Content here -->");
     });
 
     it("should return a single <option> for one category", () => {

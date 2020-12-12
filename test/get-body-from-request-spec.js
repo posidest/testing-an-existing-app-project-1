@@ -47,6 +47,6 @@ describe("The getBodyFromRequest function", () => {
           } else {
             done(`Failed. Got "${body}"`);
           }
-      })
+      });
   });
 });
